@@ -1,0 +1,9 @@
+User-agent: Yandex
+Allow: /
+Host:   http://shtori-i-dekor.ru/
+
+User-agent: googlebot
+Allow: /
+
+User-agent: *
+Allow: /

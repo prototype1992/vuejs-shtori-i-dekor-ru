@@ -1,0 +1,51 @@
+@mixin clearfix() {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin list-clear() {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@mixin block-title() {
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 32px;
+  line-height: 40px;
+  text-transform: uppercase;
+  @media (max-width: 991px) {
+    padding: 0 20px;
+    font-size: 26px;
+    line-height: 30px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+}
+
+@mixin btn-yellow($bdrs) {
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  border: 1px solid #000;
+  border-radius: $bdrs;
+  background-color: $accent-color;
+  color: #fff;
+  font-size: 18px;
+  &:hover {
+    border: 1px solid $accent-color;
+    background-color: #fff;
+    color: $accent-color;
+  }
+}
+
+
