@@ -3,68 +3,28 @@ html, body, .wrapper {
   line-height: 22px;
   font-family: 'Open Sans', 'Arial', sans-serif;
   font-weight: normal;
-  height: 100%;
-  overflow-x: hidden;
   background-color: $body-color;
-  .main {
-    min-height: 100%;
-    margin-bottom: -$footer-size;
-    .all {
-      padding-bottom: $footer-size;
-      @media (max-width: 768px) {
-      }
-    }
-  }
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Ubuntu', 'Arial', sans-serif;
-    text-transform: uppercase;
-    margin-top: 0;
-    font-weight: bold;
-  }
-  button {
-    cursor: pointer;
-  }
 }
 
-.footer {
-  background-color: $main-color;
-  color: #ffffff;
-  min-height: $footer-size;
-  text-align: center;
-  overflow: hidden;
-  .copyright {
-    margin: 0;
-    float: left;
-    line-height: $footer-size;
-    letter-spacing: 1.5px;
-    @media (max-width: 768px) {
-      float: none;
-      text-align: center;
-      line-height: 51px;
-    }
-    @media (max-width: 575px) {
-      line-height: 30px;
-    }
-  }
-  .made-site {
-    float: right;
-    line-height: $footer-size;
-    color: inherit;
-    &:hover {
-      text-decoration: none;
-    }
-    @media (max-width: 768px) {
-      float: none;
-      text-align: center;
-      line-height: 51px;
-    }
-  }
-  @media (max-width: 575px) {
-    font-size: 14px;
-    line-height: 30px;
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Ubuntu', 'Arial', sans-serif;
+  text-transform: uppercase;
+  margin-top: 0;
+  font-weight: bold;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: #000;
+  &:hover {
+    text-decoration: none;
   }
 }

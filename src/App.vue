@@ -2,47 +2,39 @@
   <div id="app">
 
     <div class="wrapper">
-      <div class="main">
-        <div class="all">
 
-          <app-header/>
+      <app-header/>
 
-          <div class="page-content">
+      <div class="page-content">
 
-            <app-first/>
+        <app-first/>
 
-            <app-our-benefits/>
+        <app-our-benefits/>
 
-            <app-we-offer/>
+        <app-we-offer/>
 
-            <app-feedback/>
+        <app-feedback/>
 
-            <app-curtains-for-various/>
+        <app-curtains-for-various/>
 
-            <app-designer-house/>
+        <app-designer-house/>
 
-            <app-gallery-of-works/>
+        <app-gallery-of-works/>
 
-            <app-benefits-bottom/>
+        <app-benefits-bottom/>
 
-            <app-how-works/>
+        <app-how-works/>
 
-            <app-feedback/>
+        <app-feedback/>
 
-            <app-about-our-warranties/>
+        <app-about-our-warranties/>
 
-            <app-index-contacts/>
+        <app-index-contacts/>
 
-          </div>
-
-        </div>
       </div>
-      <div class="footer">
-        <div class="container">
-          <p class="copyright">Copyright: 2018 - Студия дизайна "Шторы и Декор"</p>
-          <a href="http://alisultanov.ru/" target="_blank" class="made-site">Разработка сайта - Alisultanov.ru</a>
-        </div>
-      </div>
+
+      <app-footer/>
+
     </div>
 
     <!--modals-->
@@ -88,15 +80,17 @@
   import Header from './components/Header/index'
   import First from './components/First/index'
   import OurBenefits from './components/OurBenefits/index'
+  import WeOffer from './components/WeOffer/index'
   import Feedback from './components/Feedback/index'
+  import CurtainsForVarious from './components/CurtainsForVarious/index'
+  import DesignerHouse from './components/DesignerHouse/index'
+  import GalleryOfWorks from './components/GalleryOfWorks/index'
   import BenefitsBottom from './components/BenefitsBottom/index'
   import HowWorks from './components/HowWorks/index'
-  import IndexContacts from './components/IndexContacts/index'
   import AboutOurWarranties from './components/AboutOurWarranties/index'
-  import WeOffer from './components/WeOffer/index'
-  import DesignerHouse from './components/DesignerHouse/index'
-  import CurtainsForVarious from './components/CurtainsForVarious/index'
-  import GalleryOfWorks from './components/GalleryOfWorks/index'
+  import IndexContacts from './components/IndexContacts/index'
+  import Footer from './components/Footer/index'
+
 
   export default {
     name: 'app',
@@ -104,15 +98,16 @@
       'app-header': Header,
       'app-first': First,
       'app-our-benefits': OurBenefits,
+      'app-we-offer': WeOffer,
       'app-feedback': Feedback,
+      'app-curtains-for-various': CurtainsForVarious,
+      'app-designer-house': DesignerHouse,
+      'app-gallery-of-works': GalleryOfWorks,
       'app-benefits-bottom': BenefitsBottom,
       'app-how-works': HowWorks,
-      'app-index-contacts': IndexContacts,
       'app-about-our-warranties': AboutOurWarranties,
-      'app-we-offer': WeOffer,
-      'app-designer-house': DesignerHouse,
-      'app-curtains-for-various': CurtainsForVarious,
-      'app-gallery-of-works': GalleryOfWorks,
+      'app-index-contacts': IndexContacts,
+      'app-footer': Footer
     },
     data() {
       return {}

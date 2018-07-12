@@ -95,6 +95,65 @@
   export default {}
 </script>
 
-<style scoped>
+<style lang="scss">
+  @import "../../assets/styles/mixins";
 
+  .curtains-for-various {
+    padding: 40px 0;
+    .curtains-for-various__part {
+      padding: 40px 0;
+      @media (max-width: 991px) {
+        padding: 15px 0;
+      }
+    }
+    .curtains-for-various__title {
+      @include block-title();
+      margin-bottom: 40px;
+    }
+    .curtains-for-various__descr {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+    .curtains-for-various__list {
+      list-style-type: none;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .curtains-for-various__item {
+      margin-bottom: 30px;
+      width: 30%;
+      margin-left: 1%;
+      margin-right: 1%;
+      text-align: center;
+      @media (max-width: 767px) {
+        width: 48%;
+      }
+      @media (max-width: 575px) {
+        width: 100%;
+      }
+    }
+    .curtains-for-various__img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+    }
+    .curtains-for-various__text {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+    @media (max-width: 991px) {
+      padding: 30px 0;
+    }
+  }
 </style>

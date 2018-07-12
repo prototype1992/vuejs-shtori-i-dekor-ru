@@ -89,6 +89,7 @@
         <div class="gallery-of-works__link-group">
           <a href="#view-catalog" class="gallery-of-works__link fancybox">Посмотреть каталог</a>
 
+
           <p>Вы можете увидеть полный каталог наших работ и идей, который мы собирали в те6чение 13
             лет.</p>
         </div>
@@ -101,6 +102,157 @@
   export default {}
 </script>
 
-<style scoped>
+<style lang="scss">
+  @import "../../assets/styles/var";
+  @import "../../assets/styles/mixins";
 
+  .gallery-of-works {
+    padding: 80px 0;
+    .gallery-of-works__title {
+      @include block-title();
+    }
+
+    .gallery-of-works__descr {
+      text-align: center;
+    }
+
+    .gallery-of-works__list {
+      list-style-type: none;
+      margin-top: 0;
+      margin-bottom: 20px;
+      padding-left: 0;
+    }
+
+    .gallery-of-works__item {
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media (max-width: 575px) {
+        flex-wrap: wrap;
+      }
+    }
+
+    .gallery-of-works__big {
+      width: 49%;
+      @media (max-width: 575px) {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+    }
+
+    .gallery-of-works__hover {
+      position: relative;
+      overflow: hidden;
+
+      &:hover > .gallery-of-works__inner {
+        opacity: 1;
+      }
+
+      &:hover > .gallery-of-works__img {
+        transform: scale(1.2);
+      }
+    }
+
+    .gallery-of-works__smalls {
+      width: 49%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @media (max-width: 575px) {
+        width: 100%;
+      }
+    }
+
+    .gallery-of-works__small {
+      width: 48%;
+      margin-bottom: 22px;
+      @media (max-width: 991px) {
+        margin-bottom: 14px;
+      }
+    }
+
+    .gallery-of-works__small_nomargin {
+      margin-bottom: 0;
+      @media (max-width: 991px) {
+        margin-bottom: 0;
+      }
+    }
+
+    .gallery-of-works__img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+
+      transition: transform .5s linear;
+    }
+
+    .gallery-of-works__inner {
+      opacity: 0;
+      transition: opacity 0.5s linear;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      p {
+        margin-top: 0;
+        margin-bottom: 0;
+        color: #ffffff;
+        font-size: 18px;
+        padding: 40px 20px 0;
+        text-align: center;
+        text-shadow: 0 0 2px #000;
+        position: relative;
+        &:before {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 0;
+          transform: translateX(-50%);
+          background-image: url('./images/loupe.png');
+          background-repeat: no-repeat;
+          width: 32px;
+          height: 32px;
+        }
+        @media (max-width: 575px) {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .gallery-of-works__link-group {
+      text-align: center;
+    }
+
+    .gallery-of-works__link {
+      display: inline-block;
+      vertical-align: middle;
+      border: 1px solid $accent-color;
+      outline: none;
+      padding: 15px 50px;
+      font-size: 20px;
+      background-color: $accent-color;
+      border-radius: 0.3em;
+      box-shadow: rgba(0, 0, 0, 0.4) 0 0.3em 0.3em 0;
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+      &:hover {
+        background-color: #fff;
+        color: $accent-color;
+      }
+    }
+    @media (max-width: 991px) {
+      padding: 30px 0;
+    }
+  }
 </style>
