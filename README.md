@@ -1,4 +1,4 @@
-# shtori
+# Сайт - http://shtori-i-dekor.ru/
 
 ## Project setup
 ```
