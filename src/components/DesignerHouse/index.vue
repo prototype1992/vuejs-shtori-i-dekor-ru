@@ -30,6 +30,7 @@
 
 <script>
 export default {
+  name: 'DesignerHouse',
   methods: {
     showModal() {
       this.$modal.show('designer-phone');
@@ -39,7 +40,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../../assets/styles/var";
+  @import "../../assets/styles/vars";
 
   .designer-house {
     padding: 40px 0;

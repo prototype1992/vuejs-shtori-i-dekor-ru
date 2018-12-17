@@ -16,7 +16,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../../assets/styles/var";
+  @import "../../assets/styles/vars";
 
   .footer {
     background-color: $main-color;

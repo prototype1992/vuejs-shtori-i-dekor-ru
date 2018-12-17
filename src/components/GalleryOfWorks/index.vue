@@ -2,40 +2,54 @@
   <div>
     <div class="gallery-of-works">
       <h3 class="gallery-of-works__title">Галерея работ и идей</h3>
-      <p class="gallery-of-works__descr">Смотрите фото наших реальных работ и макеты проектов.</p>
+      <p class="gallery-of-works__description">
+        Смотрите фото наших реальных работ и макеты проектов.
+      </p>
 
       <div class="container">
         <ul class="gallery-of-works__list">
           <li class="gallery-of-works__item">
             <div class="gallery-of-works__big gallery-of-works__hover">
-              <img src="./images/1.jpg" class="gallery-of-works__img" alt="img">
+              <img
+                src="./images/1.jpg"
+                class="gallery-of-works__img"
+                alt="img"
+              >
               <a href="#" class="gallery-of-works__inner js-gallery-run" data-href="gallery1">
                 <p>Детская</p>
               </a>
             </div>
             <div class="gallery-of-works__smalls">
               <div class="gallery-of-works__small gallery-of-works__hover">
-                <img src="./images/2.jpg" class="gallery-of-works__img"
-                     alt="img">
+                <img
+                  src="./images/2.jpg"
+                  class="gallery-of-works__img"
+                  alt="img"
+                >
                 <a href="#" class="gallery-of-works__inner js-gallery-run" data-href="gallery2">
                   <p>Гостиная</p>
                 </a>
               </div>
               <div class="gallery-of-works__small gallery-of-works__hover">
-                <img src="./images/3.jpg" class="gallery-of-works__img"
-                     alt="img">
+                <img
+                  src="./images/3.jpg"
+                  class="gallery-of-works__img"
+                  alt="img"
+                >
                 <a href="#" class="gallery-of-works__inner js-gallery-run" data-href="gallery3">
                   <p>Спальня</p>
                 </a>
               </div>
-              <div class="gallery-of-works__small gallery-of-works__hover gallery-of-works__small_nomargin">
+              <div class="gallery-of-works__small
+              gallery-of-works__hover gallery-of-works__small_nomargin">
                 <img src="./images/4.jpg" class="gallery-of-works__img"
                      alt="img">
                 <a href="#" class="gallery-of-works__inner js-gallery-run" data-href="gallery4">
                   <p>Кухня-столовая</p>
                 </a>
               </div>
-              <div class="gallery-of-works__small gallery-of-works__hover gallery-of-works__small_nomargin">
+              <div class="gallery-of-works__small
+              gallery-of-works__hover gallery-of-works__small_nomargin">
                 <img src="./images/5.jpg" class="gallery-of-works__img"
                      alt="img">
                 <a href="#" class="gallery-of-works__inner js-gallery-run" data-href="gallery5">
@@ -61,16 +75,26 @@
                   <p>Чехлы на мебель</p>
                 </a>
               </div>
-              <div class="gallery-of-works__small gallery-of-works__hover gallery-of-works__small_nomargin">
-                <img src="./images/8.jpg" class="gallery-of-works__img"
-                     alt="img">
+              <div
+                class="gallery-of-works__small
+                gallery-of-works__hover gallery-of-works__small_nomargin"
+              >
+                <img
+                  src="./images/8.jpg"
+                  class="gallery-of-works__img"
+                  alt="img"
+                >
                 <a href="#" class="gallery-of-works__inner js-gallery-run" data-href="gallery8">
                   <p>Офисы</p>
                 </a>
               </div>
-              <div class="gallery-of-works__small gallery-of-works__hover gallery-of-works__small_nomargin">
-                <img src="./images/9.jpg" class="gallery-of-works__img"
-                     alt="img">
+              <div class="gallery-of-works__small
+              gallery-of-works__hover gallery-of-works__small_nomargin">
+                <img
+                  src="./images/9.jpg"
+                  class="gallery-of-works__img"
+                  alt="img"
+                >
                 <a href="#" class="gallery-of-works__inner js-gallery-run" data-href="gallery9">
                   <p>Шторы с фотопечатью</p>
                 </a>
@@ -87,10 +111,9 @@
         </ul>
 
         <div class="gallery-of-works__link-group">
-          <a href="#" @click.prevent="showModal" class="gallery-of-works__link">
+          <a @click.prevent="showModal" href="#" class="gallery-of-works__link">
             Посмотреть каталог
           </a>
-
 
           <p>Вы можете увидеть полный каталог наших работ и идей, который мы собирали в те6чение 13
             лет.</p>
@@ -102,7 +125,7 @@
 
 <script>
 export default {
-  name: '',
+  name: 'GalleryOfWorks',
   methods: {
     showModal() {
       this.$modal.show('view-catalog');
@@ -112,7 +135,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../../assets/styles/var";
+  @import "../../assets/styles/vars";
   @import "../../assets/styles/mixins";
 
   .gallery-of-works {
@@ -121,7 +144,7 @@ export default {
       @include block-title();
     }
 
-    .gallery-of-works__descr {
+    .gallery-of-works__description {
       text-align: center;
     }
 

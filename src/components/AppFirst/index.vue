@@ -28,14 +28,9 @@
               placeholder="Ваше имя"
               required
             >
-            <input
-              type="tel"
-              class="first__input my-phone"
-              name="order-phone"
-              placeholder="+7 XXX XXX XX XX"
-              v-mask="'+7 999 9999999'"
-              required
-            >
+            <base-phone-input
+              classes="first__input"
+            />
             <p class="msg-text">Отправлено</p>
             <button type="submit" class="first__submit">
               Отправить заявку
@@ -56,11 +51,18 @@
 </template>
 
 <script>
-export default {};
+import BasePhoneInput from "@/components/BaseComponents/BasePhoneInput";
+
+export default {
+  name: 'AppFirst',
+  components: {
+    BasePhoneInput,
+  },
+};
 </script>
 
 <style lang="scss">
-  @import "../../assets/styles/var";
+  @import "../../assets/styles/vars";
 
   .first {
     background-image: url(./images/main-bg.jpg);

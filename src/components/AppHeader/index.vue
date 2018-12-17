@@ -25,7 +25,7 @@
           </div>
           <div class="phones">
             <p>+7 916 581-17-15</p>
-            <a class="phones__link" id="headerPhoneBtn" @click.prevent="showModal">
+            <a class="phones__link" @click.prevent="showModal">
               Заказать звонок
             </a>
           </div>
@@ -48,7 +48,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../../assets/styles/var";
+  @import "../../assets/styles/vars";
   @import "../../assets/styles/mixins";
 
   .header {

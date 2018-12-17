@@ -69,7 +69,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'BenefitsBottom',
+};
 </script>
 
 <style lang="scss">

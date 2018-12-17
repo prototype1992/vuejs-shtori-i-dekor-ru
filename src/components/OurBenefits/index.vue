@@ -43,7 +43,9 @@
 </template>
 
 <script>
-  export default {}
+export default {
+  name: 'OurBenefits',
+};
 </script>
 
 <style lang="scss">

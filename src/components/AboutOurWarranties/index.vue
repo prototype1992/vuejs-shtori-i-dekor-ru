@@ -51,7 +51,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: 'AboutOurWarranties',
+};
 </script>
 
 <style lang="scss">

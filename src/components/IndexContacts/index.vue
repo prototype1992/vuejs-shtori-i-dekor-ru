@@ -15,12 +15,9 @@
               class="index-contacts-form__input"
               placeholder="Ваше имя"
             >
-            <input
-              type="tel"
-              name="order-phone"
-              class="index-contacts-form__input my-phone"
-              placeholder="+7 XXX XXX XX XX"
-            >
+            <base-phone-input
+              classes="index-contacts-form__input"
+            />
             <button type="submit" class="index-contacts-form__button">
               Отправить заявку
             </button>
@@ -55,10 +52,14 @@
 <script>
 import { yandexMap, ymapMarker } from 'vue-yandex-maps';
 
+import BasePhoneInput from "@/components/BaseComponents/BasePhoneInput";
+
 export default {
   name: '',
   components: {
-    yandexMap, ymapMarker,
+    yandexMap,
+    ymapMarker,
+    BasePhoneInput,
   },
   computed: {
     balloonText() {
@@ -73,7 +74,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../../assets/styles/var";
+  @import "../../assets/styles/vars";
   @import "../../assets/styles/mixins";
 
   .index-contacts {

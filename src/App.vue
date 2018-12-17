@@ -43,13 +43,15 @@
         <h3 class="header-phone__title">Заказать звонок</h3>
 
         <form method="post" class="js-order-form">
-          <input type="text" name="order-name" class="phone-modal__input" placeholder="Ваше имя">
           <input
-            type="tel"
-            name="order-phone"
-            class="phone-modal__input my-phone"
-            placeholder="+7 XXX XXX XX XX"
+            type="text"
+            name="order-name"
+            class="phone-modal__input"
+            placeholder="Ваше имя"
           >
+          <base-phone-input
+            classes="phone-modal__input"
+          />
           <button type="submit" class="phone-modal__button">Отправить</button>
         </form>
       </div>
@@ -59,14 +61,18 @@
         <h3 class="header-phone__title">ВЫЗВАТЬ ДИЗАЙНЕРА НА ДОМ</h3>
 
         <form method="post" class="js-order-form">
-          <input type="text" name="order-name" class="phone-modal__input" placeholder="Ваше имя">
           <input
-            type="tel"
-            name="order-phone"
-            class="phone-modal__input my-phone"
-            placeholder="+7 XXX XXX XX XX"
+            type="text"
+            name="order-name"
+            class="phone-modal__input"
+            placeholder="Ваше имя"
           >
-          <button type="submit" class="phone-modal__button">Отправить</button>
+          <base-phone-input
+            classes="phone-modal__input"
+          />
+          <button type="submit" class="phone-modal__button">
+            Отправить
+          </button>
         </form>
       </div>
     </modal>
@@ -89,12 +95,9 @@
             class="phone-modal__input"
             placeholder="Ваш email"
           >
-          <input
-            type="tel"
-            name="order-phone"
-            class="phone-modal__input my-phone"
-            placeholder="+7 XXX XXX XX XX"
-          >
+          <base-phone-input
+            classes="phone-modal__input"
+          />
           <button type="submit" class="phone-modal__button">
             Отправить
           </button>
@@ -108,7 +111,7 @@
 
 <script>
 import AppHeader from '@/components/AppHeader/index.vue';
-import First from '@/components/First/index.vue';
+import AppFirst from '@/components/AppFirst/index.vue';
 import OurBenefits from '@/components/OurBenefits/index.vue';
 import WeOffer from '@/components/WeOffer/index.vue';
 import Feedback from '@/components/Feedback/index.vue';
@@ -121,11 +124,13 @@ import AboutOurWarranties from '@/components/AboutOurWarranties/index.vue';
 import IndexContacts from '@/components/IndexContacts/index.vue';
 import AppFooter from '@/components/AppFooter/index.vue';
 
+import BasePhoneInput from "@/components/BaseComponents/BasePhoneInput";
+
 export default {
   name: 'app',
   components: {
     AppHeader,
-    'app-first': First,
+    AppFirst,
     'app-our-benefits': OurBenefits,
     'app-we-offer': WeOffer,
     'app-feedback': Feedback,
@@ -137,6 +142,8 @@ export default {
     'app-about-our-warranties': AboutOurWarranties,
     'app-index-contacts': IndexContacts,
     AppFooter,
+
+    BasePhoneInput,
   },
   data() {
     return {};
@@ -145,10 +152,9 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "assets/styles/var";
+  @import "assets/styles/vars";
   @import "assets/styles/mixins";
   @import "assets/styles/normalize";
   @import "assets/styles/grid";
   @import "assets/styles/base";
-  @import "assets/styles/app";
 </style>

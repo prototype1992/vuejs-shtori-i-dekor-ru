@@ -36,7 +36,9 @@
 </template>
 
 <script>
-  export default {}
+export default {
+  name: 'WeOffer',
+};
 </script>
 
 <style lang="scss">

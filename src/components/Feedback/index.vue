@@ -1,43 +1,45 @@
 <template>
-  <div>
-    <section class="feedback">
-      <h2 class="feedback-title">
-        НУЖНА КОНСУЛЬТАЦИЯ? <br>
-        <span>ОСТАВЬТЕ ЗАЯВКУ</span> - МЫ ПЕРЕЗВОНИМ ВАМ В ТЕЧЕНИЕ 1 ЧАСА!
-      </h2>
-      <form class="container feedback-form js-order-form">
-        <input
-          type="text"
-          placeholder="Имя *"
-          name="order-name"
-          class="feedback-input"
-          required
-        >
-        <input
-          type="tel"
-          placeholder="+7 XXX XXX XX XX"
-          name="order-phone"
-          class="feedback-input my-phone"
-          required
-        >
-        <button class="feedback-btn">Отправить</button>
-      </form>
-    </section>
-  </div>
+  <section class="feedback">
+    <h2 class="feedback__title">
+      НУЖНА КОНСУЛЬТАЦИЯ?
+      <br>
+      <span>ОСТАВЬТЕ ЗАЯВКУ</span> - МЫ ПЕРЕЗВОНИМ ВАМ В ТЕЧЕНИЕ 1 ЧАСА!
+    </h2>
+    <form class="container feedback-form js-order-form">
+      <input
+        type="text"
+        placeholder="Имя *"
+        name="order-name"
+        class="feedback-input"
+        required
+      >
+      <base-phone-input
+        classes="feedback-input"
+      />
+      <button class="feedback-btn">Отправить</button>
+    </form>
+  </section>
 </template>
 
 <script>
-export default {};
+import BasePhoneInput from "@/components/BaseComponents/BasePhoneInput";
+
+export default {
+  name: 'FeedBack',
+  components: {
+    BasePhoneInput,
+  },
+};
 </script>
 
 <style lang="scss">
-  @import "../../assets/styles/var";
+  @import "../../assets/styles/vars";
   @import "../../assets/styles/mixins";
 
   .feedback {
     background-color: $main-color;
     padding: 80px 0;
-    .feedback-title {
+    .feedback__title {
       @include block-title();
       color: #ffffff;
       margin-bottom: 40px;

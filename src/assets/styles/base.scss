@@ -23,12 +23,93 @@ button {
 }
 
 a {
-  color: #000;
+  color: $black-color;
+
   &:hover {
     text-decoration: none;
   }
 }
 
 .v--modal-overlay {
-  background: rgba(0, 0, 0, .8);
+  background-color: rgba(0, 0, 0, .8);
 }
+
+
+.page-title {
+  text-align: center;
+  padding: 30px 0;
+  background-color: $main-color;
+  color: $white-color;
+  text-transform: uppercase;
+  font-size: 32px;
+  margin-top: 0;
+}
+
+.page-descr {
+  text-align: center;
+  font-size: 18px;
+  padding-top: 10px;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+// map block
+.map-block {
+  margin-bottom: 50px;
+  @media (max-width: 480px) {
+    height: 400px;
+    overflow: hidden;
+  }
+}
+
+.msg-text {
+  display: none;
+  margin: 10px 0;
+  font-size: 22px;
+  text-align: center;
+  color: $black-color;
+}
+
+.view-catalog-form-text {
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 10px;
+}
+
+// modals
+.phone-modal {
+  padding: 20px;
+  text-align: center;
+
+  .header-phone__title {
+    font-size: 30px;
+    padding: 10px;
+    @media (max-width: 991px) {
+      font-size: 20px;
+    }
+  }
+
+  .phone-modal__input {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding-left: 15px;
+    margin-bottom: 15px;
+  }
+
+  .phone-modal__button {
+    @include btn-yellow(5px);
+    height: 60px;
+    width: 100%;
+    display: block;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
+}
+
+// modals end
+
