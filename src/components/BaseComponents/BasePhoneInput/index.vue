@@ -5,12 +5,12 @@
     name="order-phone"
     placeholder="+7 XXX XXX XX XX"
     v-mask="'+7 999 9999999'"
+    @change="change"
     required
   >
 </template>
 
 <script>
-
 export default {
   name: 'BasePhoneInput',
   props: {
@@ -19,14 +19,10 @@ export default {
       default: 'phone-input',
     },
   },
-  components: {
-  },
-  computed: {
+  methods: {
+    change(event) {
+      this.$emit('change', event.target.value);
+    },
   },
 };
 </script>
-
-<style lang="scss" scoped>
-  .phone-input {
-  }
-</style>

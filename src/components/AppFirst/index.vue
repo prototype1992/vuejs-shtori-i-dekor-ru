@@ -20,19 +20,22 @@
             Оформите заявку через сайт и получите скидку 20%
           </h2>
 
-          <form class="first__form js-order-form" id="zamer">
+          <form class="first__form">
             <input
               type="text"
               class="first__input"
               name="order-name"
               placeholder="Ваше имя"
+              v-model="name"
               required
             >
             <base-phone-input
               classes="first__input"
+              @change="changePhone"
             />
+            <p>{{phone}}</p>
             <p class="msg-text">Отправлено</p>
-            <button type="submit" class="first__submit">
+            <button type="submit" class="first__submit" @click.prevent="send">
               Отправить заявку
             </button>
           </form>
@@ -51,12 +54,35 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
+
 import BasePhoneInput from "@/components/BaseComponents/BasePhoneInput";
 
 export default {
   name: 'AppFirst',
   components: {
     BasePhoneInput,
+  },
+  data() {
+    return {
+      name: '',
+      phone: '',
+    };
+  },
+  methods: {
+    ...mapActions({
+      sendForm: 'sendForm',
+    }),
+    changePhone(value) {
+      this.phone = value;
+    },
+    send() {
+      this.sendForm({
+        name: this.name,
+        phone: this.phone,
+        email: '',
+      });
+    },
   },
 };
 </script>
