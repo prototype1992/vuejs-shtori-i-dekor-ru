@@ -9,12 +9,25 @@
             Оформите заявку через сайт <br>и получите скидку 20%
           </h4>
           <form method="post" class="js-order-form">
-            <input type="text" name="order-name" class="index-contacts-form__input" placeholder="Ваше имя">
-            <input type="tel" name="order-phone" class="index-contacts-form__input my-phone"
-                   placeholder="+7 XXX XXX XX XX">
-            <button type="submit" class="index-contacts-form__button">Отправить заявку</button>
+            <input
+              type="text"
+              name="order-name"
+              class="index-contacts-form__input"
+              placeholder="Ваше имя"
+            >
+            <input
+              type="tel"
+              name="order-phone"
+              class="index-contacts-form__input my-phone"
+              placeholder="+7 XXX XXX XX XX"
+            >
+            <button type="submit" class="index-contacts-form__button">
+              Отправить заявку
+            </button>
           </form>
-          <p class="index-contacts-form__text">* Предложение действует до конца месяца.</p>
+          <p class="index-contacts-form__text">
+            * Предложение действует до конца месяца.
+          </p>
         </div>
       </div>
       <div class="index-map-block" id="map-block">
@@ -25,15 +38,12 @@
           :controls="['trafficControl']"
         >
           <ymap-marker
+            marker-id="1"
             marker-type="placemark"
             :coords="[55.799765, 37.936636]"
             hint-content="Россия, Московская область, Балашиха, Советская улица, 10А"
             :balloonContent="'Шторы и Декор'"
-            :balloon="{
-            header: '<h3>Студия дизайна Шторы и Декор</h3>',
-            body: '<p>Московская область, Балашиха, Советская улица, 10А</p>',
-            footer: '<p>+7 916 581-17-15</p>'
-            }"
+            :balloon="balloonText"
             :icon="{color: 'blue'}"
           />
         </yandex-map>
@@ -43,14 +53,23 @@
 </template>
 
 <script>
-  import {yandexMap, ymapMarker} from 'vue-yandex-maps'
+import { yandexMap, ymapMarker } from 'vue-yandex-maps';
 
-  export default {
-    name: '',
-    components: {
-      yandexMap, ymapMarker
-    }
-  }
+export default {
+  name: '',
+  components: {
+    yandexMap, ymapMarker,
+  },
+  computed: {
+    balloonText() {
+      return {
+        header: '<h3>Студия дизайна Шторы и Декор</h3>',
+        body: '<p>Московская область, Балашиха, Советская улица, 10А</p>',
+        footer: '<p>+7 916 581-17-15</p>',
+      };
+    },
+  },
+};
 </script>
 
 <style lang="scss">

@@ -25,7 +25,7 @@
           </div>
           <div class="phones">
             <p>+7 916 581-17-15</p>
-            <a class="phones__link fancybox" id="headerPhoneBtn" href="#header-phone">
+            <a class="phones__link" id="headerPhoneBtn" @click.prevent="showModal">
               Заказать звонок
             </a>
           </div>
@@ -37,7 +37,14 @@
 </template>
 
 <script>
-  export default {}
+export default {
+  name: 'AppHeader',
+  methods: {
+    showModal() {
+      this.$modal.show('header-phone');
+    },
+  },
+};
 </script>
 
 <style lang="scss">

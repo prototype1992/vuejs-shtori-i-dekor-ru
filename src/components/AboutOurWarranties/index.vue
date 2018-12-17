@@ -1,32 +1,48 @@
 <template>
   <div>
     <div class="about-our-warranties">
-      <h3 class="about-our-warranties__title">Узнайте о наших гарантиях</h3>
-      <p class="about-our-warranties__descr">
-        Мы гарантируем, что наши шторы превзойдут Ваши ожидания! Более 2 500 клиентов не могут ошибаться
+      <h3 class="about-our-warranties__title">
+        Узнайте о наших гарантиях
+      </h3>
+      <p class="about-our-warranties__description">
+        Мы гарантируем, что наши шторы превзойдут Ваши ожидания!
+        Более 2 500 клиентов не могут ошибаться
       </p>
       <div class="container">
         <ul class="about-our-warranties__list">
           <li class="about-our-warranties__item">
-            <img src="./images/1.gif" alt="img"
-                 class="about-our-warranties__img">
-            <p class="about-our-warranties__text">Гарантии на шторы <br>2 года</p>
+            <img
+              src="./images/1.gif"
+              alt="img"
+              class="about-our-warranties__img"
+            >
+            <p class="about-our-warranties__text">
+              Гарантии на шторы <br>2 года
+            </p>
           </li>
           <li class="about-our-warranties__item">
-            <img src="./images/2.gif" alt="img"
-                 class="about-our-warranties__img">
+            <img
+              src="./images/2.gif"
+              alt="img"
+              class="about-our-warranties__img"
+            >
             <p class="about-our-warranties__text">
               Гарантия работы официально и по договору
               <strong>
-                Договор, в первую очередь, нужен Вам, а не нам, так как защищает Ваши интересы
-                как потребителя.
+                Договор, в первую очередь, нужен Вам, а не нам,
+                так как защищает Ваши интересы как потребителя.
               </strong>
             </p>
           </li>
           <li class="about-our-warranties__item">
-            <img src="./images/3.gif" alt="img"
-                 class="about-our-warranties__img">
-            <p class="about-our-warranties__text">Гарантия выполнения заказа точно в срок.</p>
+            <img
+              src="./images/3.gif"
+              alt="img"
+              class="about-our-warranties__img"
+            >
+            <p class="about-our-warranties__text">
+              Гарантия выполнения заказа точно в срок.
+            </p>
           </li>
         </ul>
       </div>
@@ -35,7 +51,7 @@
 </template>
 
 <script>
-  export default {}
+export default {};
 </script>
 
 <style lang="scss">
@@ -47,7 +63,7 @@
     .about-our-warranties__title {
       @include block-title();
     }
-    .about-our-warranties__descr {
+    .about-our-warranties__description {
       font-size: 20px;
       margin-bottom: 30px;
       padding: 0 20px;

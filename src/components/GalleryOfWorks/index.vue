@@ -87,7 +87,9 @@
         </ul>
 
         <div class="gallery-of-works__link-group">
-          <a href="#view-catalog" class="gallery-of-works__link fancybox">Посмотреть каталог</a>
+          <a href="#" @click.prevent="showModal" class="gallery-of-works__link">
+            Посмотреть каталог
+          </a>
 
 
           <p>Вы можете увидеть полный каталог наших работ и идей, который мы собирали в те6чение 13
@@ -99,7 +101,14 @@
 </template>
 
 <script>
-  export default {}
+export default {
+  name: '',
+  methods: {
+    showModal() {
+      this.$modal.show('view-catalog');
+    },
+  },
+};
 </script>
 
 <style lang="scss">

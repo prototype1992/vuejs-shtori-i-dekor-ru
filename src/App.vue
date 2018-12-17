@@ -38,7 +38,7 @@
     </div>
 
     <!--modals-->
-    <div class="hidden">
+    <modal name="header-phone" height="auto">
       <div id="header-phone" class="phone-modal">
         <h3 class="header-phone__title">Заказать звонок</h3>
 
@@ -53,7 +53,8 @@
           <button type="submit" class="phone-modal__button">Отправить</button>
         </form>
       </div>
-
+    </modal>
+    <modal name="designer-phone" height="auto">
       <div id="designer-phone" class="phone-modal">
         <h3 class="header-phone__title">ВЫЗВАТЬ ДИЗАЙНЕРА НА ДОМ</h3>
 
@@ -68,48 +69,62 @@
           <button type="submit" class="phone-modal__button">Отправить</button>
         </form>
       </div>
-
+    </modal>
+    <modal name="view-catalog" height="auto">
       <div id="view-catalog" class="phone-modal">
-        <p class="view-catalog-form-text">Заполните форму и мы вам отправим наши работы</p>
+        <p class="view-catalog-form-text">
+          Заполните форму и мы вам отправим наши работы
+        </p>
 
         <form method="post" class="js-order-form">
-          <input type="text" name="order-name" class="phone-modal__input" placeholder="Ваше имя">
-          <input type="email" name="order-email" class="phone-modal__input" placeholder="Ваш email">
+          <input
+            type="text"
+            name="order-name"
+            class="phone-modal__input"
+            placeholder="Ваше имя"
+          >
+          <input
+            type="email"
+            name="order-email"
+            class="phone-modal__input"
+            placeholder="Ваш email"
+          >
           <input
             type="tel"
             name="order-phone"
             class="phone-modal__input my-phone"
             placeholder="+7 XXX XXX XX XX"
           >
-          <button type="submit" class="phone-modal__button">Отправить</button>
+          <button type="submit" class="phone-modal__button">
+            Отправить
+          </button>
         </form>
       </div>
-
-    </div>
+    </modal>
     <!--modals end-->
 
   </div>
 </template>
 
 <script>
-import Header from '@/components/Header';
-import First from '@/components/First';
-import OurBenefits from '@/components/OurBenefits';
-import WeOffer from '@/components/WeOffer';
-import Feedback from '@/components/Feedback';
-import CurtainsForVarious from '@/components/CurtainsForVarious';
-import DesignerHouse from '@/components/DesignerHouse';
-import GalleryOfWorks from '@/components/GalleryOfWorks';
-import BenefitsBottom from '@/components/BenefitsBottom';
-import HowWorks from '@/components/HowWorks';
-import AboutOurWarranties from '@/components/AboutOurWarranties';
-import IndexContacts from '@/components/IndexContacts';
-import Footer from '@/components/Footer';
+import AppHeader from '@/components/AppHeader/index.vue';
+import First from '@/components/First/index.vue';
+import OurBenefits from '@/components/OurBenefits/index.vue';
+import WeOffer from '@/components/WeOffer/index.vue';
+import Feedback from '@/components/Feedback/index.vue';
+import CurtainsForVarious from '@/components/CurtainsForVarious/index.vue';
+import DesignerHouse from '@/components/DesignerHouse/index.vue';
+import GalleryOfWorks from '@/components/GalleryOfWorks/index.vue';
+import BenefitsBottom from '@/components/BenefitsBottom/index.vue';
+import HowWorks from '@/components/HowWorks/index.vue';
+import AboutOurWarranties from '@/components/AboutOurWarranties/index.vue';
+import IndexContacts from '@/components/IndexContacts/index.vue';
+import AppFooter from '@/components/AppFooter/index.vue';
 
 export default {
   name: 'app',
   components: {
-    'app-header': Header,
+    AppHeader,
     'app-first': First,
     'app-our-benefits': OurBenefits,
     'app-we-offer': WeOffer,
@@ -121,7 +136,7 @@ export default {
     'app-how-works': HowWorks,
     'app-about-our-warranties': AboutOurWarranties,
     'app-index-contacts': IndexContacts,
-    'app-footer': Footer,
+    AppFooter,
   },
   data() {
     return {};
@@ -130,12 +145,10 @@ export default {
 </script>
 
 <style lang="scss">
-
   @import "assets/styles/var";
   @import "assets/styles/mixins";
   @import "assets/styles/normalize";
   @import "assets/styles/grid";
   @import "assets/styles/base";
   @import "assets/styles/app";
-
 </style>

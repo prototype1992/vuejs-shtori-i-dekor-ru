@@ -1,14 +1,18 @@
 <template>
-  <div class="footer">
+  <footer class="footer">
     <div class="container">
       <p class="copyright">Copyright: 2018 - Студия дизайна "Шторы и Декор"</p>
-      <a href="http://alisultanov.ru/" target="_blank" class="made-site">Разработка сайта - Alisultanov.ru</a>
+      <a href="http://alisultanov.ru/" target="_blank" class="made-site">
+        Разработка сайта - Alisultanov.ru
+      </a>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script>
-  export default {}
+export default {
+  name: 'AppFooter',
+};
 </script>
 
 <style lang="scss">
